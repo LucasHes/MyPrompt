@@ -2,7 +2,7 @@
 
 A clean and practical prompt editing and management tool that helps you efficiently manage and use your frequently used prompt templates.
 
-![My Prompt Application Screenshot](https://postimg.cc/bswpC6j9)
+![My Prompt Application Screenshot](https://github.com/LucasHes/MyPrompt/blob/main/page.png)
 
 ## Features
 
@@ -14,7 +14,7 @@ A clean and practical prompt editing and management tool that helps you efficien
 
 ## Installation
 
-1. Download the latest installation package from the [Releases](https://github.com/yourusername/my-prompt/releases) page
+1. Download the latest installation package from the [Releases](https://github.com/LucasHes/MyPrompt/releases/download/AI%2CPrompt%2CEditor%2CTemplate/My.Prompt.Setup.1.1.0.exe) page
 2. Double-click to run the installer and follow the prompts to complete installation
 3. After launching the application, you can immediately use the default templates provided or create your own
 
