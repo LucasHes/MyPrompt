@@ -1,0 +1,347 @@
+:root {
+    --main-bg: #e8f4e5;
+    --text-color: #2d2d2d;
+    --button-primary: #ff3366;
+    --button-secondary: #0066ff;
+}
+
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 3px solid var(--text-color);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--button-primary);
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.left-section {
+    flex: 1;
+}
+
+.template-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.toolbar-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.toolbar-left {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.toolbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.apple-button {
+    border-radius: 0;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.apple-button.primary {
+    background-color: var(--button-primary);
+    color: white;
+}
+
+.apple-button.secondary {
+    background-color: var(--button-secondary);
+    color: white;
+}
+
+.apple-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.template-button-toolbar {
+    background-color: #54b374 !important;
+    border-radius: 0;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 3px solid var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.template-button-toolbar:hover {
+    background-color: #408b59 !important;
+}
+
+textarea#promptArea {
+    width: 92%;
+    height: 500px;
+    padding: 25px;
+    border: 3px solid var(--text-color);
+    border-radius: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: white;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.custom-templates {
+    width: 250px;
+    background-color: white;
+    padding: 25px;
+    border: 3px solid var(--text-color);
+    height: fit-content;
+}
+
+.template-input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.template-input button {
+    margin-bottom: 5px;
+}
+
+.template-input input {
+    width: 150px;
+    padding: 12px;
+    border: 3px solid var(--text-color);
+    border-radius: 0;
+    font-size: 14px;
+    background-color: white;
+}
+
+.template-input textarea {
+    height: 120px;
+    padding: 12px;
+    border: 3px solid var(--text-color);
+    border-radius: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    margin-bottom: 0;
+    color: #333;
+}
+
+.template-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border: 3px solid var(--text-color);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-template-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-template-form input,
+.edit-template-form textarea {
+    padding: 12px;
+    border: 3px solid var(--text-color);
+    border-radius: 0;
+    font-size: 14px;
+    background-color: white;
+}
+
+.edit-template-form textarea {
+    height: 150px;
+    padding: 12px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: #333;
+}
+
+.guide-modal-content {
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.guide-content {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.guide-content h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.guide-content p {
+    margin-bottom: 15px;
+}
+
+.guide-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.guide-content li {
+    margin-bottom: 5px;
+}
+
+.guide-section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.guide-section:last-child {
+    border-bottom: none;
+}
+
+.about-modal-content {
+    max-width: 500px;
+}
+
+.about-content {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    .custom-templates {
+        width: 100%;
+    }
+}

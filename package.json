@@ -1,0 +1,61 @@
+{
+    "name": "my-prompt",
+    "version": "1.1.0",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "build": "electron-builder"
+    },
+    "build": {
+      "appId": "com.lucashe.myprompt",
+      "productName": "My Prompt",
+      "directories": {
+        "output": "dist"
+      },
+      "files": [
+        "**/*",
+        "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme}",
+        "!**/node_modules/*/{test,__tests__,tests,powered-test,example,examples}",
+        "!**/node_modules/*.d.ts",
+        "!**/node_modules/.bin",
+        "!dist",
+        "!build",
+        "!*.{iml,o,hprof,orig,pyc,pyo,rbc,swp,csproj,sln,xproj}",
+        "!.env",
+        "!**/.{editorconfig,gitattributes,gitignore}",
+        "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitkeep,.gitmodules}"
+      ],
+      "win": {
+        "target": "nsis",
+        "icon": "icon.ico"
+      },
+      "nsis": {
+        "oneClick": false,
+        "allowToChangeInstallationDirectory": true,
+        "createDesktopShortcut": true,
+        "createStartMenuShortcut": true,
+        "shortcutName": "My Prompt"
+      },
+      "forceCodeSigning": false,
+      "artifactName": "${productName} Setup ${version}.${ext}",
+      "asarUnpack": [
+        "config/**/*"
+      ],
+      "extraResources": [
+        {
+          "from": "config",
+          "to": "config",
+          "filter": [
+            "**/*"
+          ]
+        }
+      ]
+    },
+    "description": "Prompt Editor",
+    "author": "Lucas He",
+    "license": "ISC",
+    "devDependencies": {
+      "electron": "^25.0.0",
+      "electron-builder": "^24.4.0"
+    }
+  }
